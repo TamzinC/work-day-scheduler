@@ -30,6 +30,10 @@ textarea {
   border-radius: 15px;
 }
 
+.show {
+  display: none;
+}
+
 .row {
   white-space: pre-wrap;
   height: 80px;

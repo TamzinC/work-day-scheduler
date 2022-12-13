@@ -49,7 +49,7 @@ for (var hour = 9; hour <= 17; hour++) {
 }
 
 //Adding an event listener with JQuery to save the text entered in the textarea
-$('.saveBtn').on('click', function() {
+$('.saveBtn').on('click', function () {
     console.log($(this).siblings('.hour').text());
 
     var key = $(this).siblings('.hour').text();
@@ -58,10 +58,23 @@ $('.saveBtn').on('click', function() {
     console.log(value);
 
     localStorage.setItem(key, value);
-    window.alert('Added task to localStorage');
+
+    // Creating pop-up message to user to say message has been saved
+    //Creating html element
+    var popUp = $('body').append(`<div>
+    <p>Task added to localStorage</p>
+    </div>`).addClass('.time-block');
+    
+    //Adding ccs time-block class
+    // $(popUp).addClass('.time-block');
+
+    //Add setTimeout function to make pop-up message appear for only a few secs
+    // Need to add show class as well
+
+
 })
 
-$('textarea').each(function() {
+$('textarea').each(function () {
     var key = $(this).siblings('.hour').text();
     $(this).val(localStorage.getItem(key));
 
