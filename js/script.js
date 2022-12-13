@@ -58,6 +58,7 @@ $('.saveBtn').on('click', function() {
     console.log(value);
 
     localStorage.setItem(key, value);
+    window.alert('Added task to localStorage');
 })
 
 $('textarea').each(function() {
