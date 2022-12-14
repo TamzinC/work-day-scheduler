@@ -59,38 +59,13 @@ $('.saveBtn').on('click', function () {
 
     localStorage.setItem(key, value);
 
-    // Creating pop-up message to user to say message has been saved
-    //Creating html element
-    var popUp = $('body').append(`<div>
-    <p>Task added to localStorage</p>
-    </div>`).addClass('.time-block');
-    
-    //Adding ccs time-block class
-    // $(popUp).addClass('.time-block');
-
-    //Add setTimeout function to make pop-up message appear for only a few secs
-    // Need to add show class as well
-
-
+    window.alert('Your task has been saved to localStorage');
 })
 
+// Making sure the text added by the user is saved in the textarea
 $('textarea').each(function () {
     var key = $(this).siblings('.hour').text();
     $(this).val(localStorage.getItem(key));
 
 })
 
-//if time is in the past, rows should be grey
-//if current time, row should be red
-//if time is in the future, rows should be green
-
-
-
-//user should be able to input their text as multiple lines in text area when they click on it
-
-
-
-//user should be able to press the save button to save their task for a specic hour
-//this will need to be saved into local storage
-//data should remain saved even after refreshing/closing browser
-//a pop up should be displayed saying their task has been added to localStorage
