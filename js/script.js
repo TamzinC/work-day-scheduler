@@ -59,7 +59,7 @@ $('.saveBtn').on('click', function () {
 
     localStorage.setItem(key, value);
 
-    window.alert('Your task has been saved to localStorage');
+    window.alert('Your task has been added to localStorage!');
 })
 
 // Making sure the text added by the user is saved in the textarea
